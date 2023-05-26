@@ -1,4 +1,4 @@
-package godev
+package uitools
 
 import "strings"
 
@@ -18,5 +18,9 @@ func RemoveTagStartdEnd(in *string, tagRemove string) {
 			break //salgo del for
 		}
 	}
-	*in = strings.Join(lines, "\n")
+
+	// *in = strings.Join(lines, "\n")
+
+	// Unir las líneas modificadas y eliminar espacios en blanco iniciales y finales del bloque
+	*in = strings.TrimSpace(strings.Join(lines, "\n"))
 }
